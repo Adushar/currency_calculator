@@ -1,0 +1,22 @@
+.row
+  .col-6
+    %h1 My currency calculator
+    %form#converter{:action => "/convert"}
+      %p
+        Changing:
+        %input.form-control{:name => "amount", type: "number", min: 0, step: 0.01}
+        %select.custom-select{:name => "from"}
+          - @rate_names.each do |rate_name|
+            %option{:value => "#{rate_name}"}= rate_name
+      %p
+        %input.btn.btn-danger{:type => "submit", value: "="}
+        %button#change_currencies.btn.btn-light.btn-outline-secondary ⇅
+      %p
+        Getting:
+        %input#result.form-control{:disabled => "disabled"}
+        %select.custom-select{:name => "to"}
+          - @rate_names.each do |rate_name|
+            %option{:value => "#{rate_name}"}= rate_name
+  .col-6
+    %h1 Example
+    %iframe{:allowtransparency => "true", :frameborder => "0", :height => "350px;", :scrolling => "no", :src => "//content.finance.ua/ua/converters/currency-embed?source=98&cfrom=usd&cto=uah", :width => "240"}
