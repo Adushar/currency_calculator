@@ -17,7 +17,7 @@
   ```bash
   git clone https://github.com/Adushar/currency_calculator.git && cd currency_calculator
   ```
-  Then lets install gems
+  Then install gems
   ```bash
   bundle
   ```
@@ -30,7 +30,7 @@
   ruby app.rb
   ```
   
-  # Dont forget about tests
+  # Don't forget about tests
   ```bash
   rspec spec
   ```
